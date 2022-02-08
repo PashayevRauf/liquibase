@@ -13,5 +13,19 @@
             <column name="address" type="varchar(255)"/>
         </addColumn>
     </changeSet>
+    <changeSet id="2" author="Rauf Pashayev">
+        <addColumn
+                schemaName="liquibase"
+                tableName="persons">
+            <column name="level" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="4" author="Rauf Pashayev">
+        <addColumn
+                schemaName="liquibase"
+                tableName="persons">
+            <column name="school" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
 
 </databaseChangeLog>

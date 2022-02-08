@@ -15,13 +15,15 @@ public class LiquibaseController {
     PersonRepositroy personRepositroy;
 
 
-    @PostMapping("/person")
+    @PostMapping("/insert")
     private String createPerson(@RequestParam String name) {
-        personRepositroy.save(new Person(name, "6.7"));
+        personRepositroy.save(new Person(name, "Azerbaijan Technical University"));
+        String toReturn = personRepositroy.finByName(name);
+
         return personRepositroy.finByName(name) + " Saved Successfully";
     }
 
-    @GetMapping("/person")
+    @GetMapping("/getting")
     private List<Person> getAllThePerson() {
         return (List<Person>) personRepositroy.findAll();
     }

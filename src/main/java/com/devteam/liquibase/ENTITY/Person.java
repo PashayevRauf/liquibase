@@ -11,23 +11,44 @@ public class Person {
     @Column(name = "id")
     private int id;
 
-    @Column
+    @Column(name = "name")
     private String name;
 
-    @Column
+    @Column(name = "height")
     private String height;
 
     @Column
     private String address;
 
+    @Column(name = "level")
+    private String level;
+
+    @Column(name = "school")
+    private String school;
+
     public Person() {
     }
 
-    public Person(String name, String height) {
+    public Person(String name, String description) {
         this.name = name;
-        this.height = height;
+        this.school = description;
     }
 
+    public String getLevel() {
+        return level;
+    }
+
+    public void setLevel(String level) {
+        this.level = level;
+    }
+
+    public String getDescription() {
+        return school;
+    }
+
+    public void setDescription(String description) {
+        this.school = description;
+    }
 
     public String getName() {
         return name;
