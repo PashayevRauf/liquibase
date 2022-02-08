@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * @author Rauf Pashayev
+ */
 @RestController
 @RequestMapping("/person")
 public class LiquibaseController {
